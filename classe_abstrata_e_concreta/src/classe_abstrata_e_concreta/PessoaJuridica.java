@@ -12,6 +12,10 @@ public class PessoaJuridica extends Pessoa { // Declaração da classe PessoaJur
     public String getIdentificacao() { // Implementação do método abstrato getIdentificacao da classe pai
         return cnpj; // Retorna o CNPJ como identificação
     }
+
+        public String getCnpj() { // Definição do método para obter o CNPJ
+            return cnpj; // Retorno do CNPJ
+    }
 }
 
 //Na estrutura de herança em Java, a classe pai é aquela da qual uma classe derivada herda atributos e métodos. No contexto do código fornecido, a classe pai é a classe abstrata Pessoa. A classe PessoaJuridica estende a classe Pessoa, o que significa que ela herda os métodos e atributos definidos na classe Pessoa. Ao estender a classe Pessoa, a classe PessoaJuridica herda os métodos como getNome(), getEndereco(), getTelefone() e o método abstrato getIdentificacao(), que precisa ser implementado pela classe filha. A classe Pessoa é a classe base da qual outras classes, como PessoaFisica e PessoaJuridica, podem derivar.
