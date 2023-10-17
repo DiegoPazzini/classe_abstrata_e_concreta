@@ -4,7 +4,7 @@ public class PessoaJuridica extends Pessoa { // Declaração da classe PessoaJur
     private String cnpj; // Declaração do atributo CNPJ
 
     public PessoaJuridica(String nome, String endereco, String cpf, String cnpj) { // Construtor da classe PessoaJuridica que chama o construtor da classe pai
-        super(nome, endereco, cpf); // Chamada ao construtor da classe pai com os parâmetros fornecidos
+        super(nome, endereco); // Chamada ao construtor da classe pai com os parâmetros fornecidos
         this.cnpj = cnpj; // Inicialização do atributo CNPJ
     }
 
