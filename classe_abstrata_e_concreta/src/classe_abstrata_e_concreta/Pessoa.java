@@ -3,14 +3,13 @@ package classe_abstrata_e_concreta; // Declaração do pacote
 import java.util.Scanner; // Importação da classe Scanner para entrada de dados
 
 public abstract class Pessoa { // Declaração da classe abstrata Pessoa
+
     private String nome; // Declaração do atributo nome
     private String endereco; // Declaração do atributo endereço
-    private String cpf; // Declaração do atributo CPF
 
-    public Pessoa(String nome, String endereco, String cpf) { // Construtor da classe Pessoa
+    public Pessoa(String nome, String endereco) { // Construtor da classe Pessoa
         this.nome = nome; // Inicialização do atributo nome
         this.endereco = endereco; // Inicialização do atributo endereço
-        this.cpf = cpf; // Inicialização do atributo CPF
     }
 
     public abstract String getIdentificacao(); // Declaração do método abstrato getIdentificacao
@@ -23,10 +22,6 @@ public abstract class Pessoa { // Declaração da classe abstrata Pessoa
         return endereco; // Retorno do endereço
     }
 
-    public String getCpf() { // Definição do método para obter o CPF
-        return cpf; // Retorno do CPF
-    }
-
     public static void main(String[] args) { // Método principal
         Scanner scanner = new Scanner(System.in); // Criação de um objeto Scanner para entrada de dados
 
@@ -36,21 +31,17 @@ public abstract class Pessoa { // Declaração da classe abstrata Pessoa
         System.out.print("Digite o endereço: "); // Solicitação para digitar o endereço
         String endereco = scanner.nextLine(); // Leitura do endereço fornecido
 
-        System.out.print("Digite o CPF: "); // Solicitação para digitar o CPF
-        String cpf = scanner.nextLine(); // Leitura do CPF fornecido
-
-        Pessoa pessoa = new Pessoa(nome, endereco, cpf) { // Criação de um objeto Pessoa com os valores fornecidos
+        Pessoa pessoa = new Pessoa(nome, endereco) { // Criação de um objeto Pessoa com os valores fornecidos
             @Override
             public String getIdentificacao() { // Implementação do método abstrato getIdentificacao
-                return getCpf(); // Retorna o CPF
+                // Pode retornar um identificador personalizado ou outra informação relevante
+                return null;
             }
         };
 
         System.out.println("Nome: " + pessoa.getNome()); // Impressão do nome
         System.out.println("Endereço: " + pessoa.getEndereco()); // Impressão do endereço
-        System.out.println("CPF: " + pessoa.getCpf()); // Impressão do CPF
 
         scanner.close(); // Fechamento do scanner
     }
 }
-
