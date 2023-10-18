@@ -2,7 +2,7 @@
 
 Módulo 13
 
-Programa criado com o objetivo de criar um programa com classe Pessoa (abstrata) e duas subclasses (concretas) Pessoa Física e Jurídica.
+Programa desenvolvido com o objetivo de criar um programa com classe Pessoa (abstrata) e duas subclasses (concretas) Pessoa Física e Jurídica.
 Propriedades das classes de Pessoa Física e Jurídica que são igualmente usadas em ambas (comuns entre elas) foram inseridas na classe Pessoa. 
 E foram criadas propriedades especificas para cada classe concreta.
 E as os parâmetros fornecidos.
